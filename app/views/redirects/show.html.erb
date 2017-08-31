@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rule:</strong>
+  <%= @redirect.rule %>
+</p>
+
+<p>
+  <strong>New url:</strong>
+  <%= @redirect.new_url %>
+</p>
+
+<%= link_to 'Edit', edit_redirect_path(@redirect) %> |
+<%= link_to 'Back', redirects_path %>

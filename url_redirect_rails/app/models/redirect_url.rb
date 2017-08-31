@@ -1,2 +1,0 @@
-class RedirectUrl < ApplicationRecord
-end
