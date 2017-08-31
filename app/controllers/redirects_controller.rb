@@ -21,10 +21,25 @@ class RedirectsController < ApplicationController
   def edit
   end
 
+  # GET /redirect
+ # GET /redirect
+  def red
 
-  # GET /redirects/process/url
-  def process
+    url = params[:url]
+
+    Redirect.all.each do |redirect|
+
+        puts  redirect.rule
+        puts  redirect.new_url
+
+        if redirect.rule.match(url) 
+          redirect_to redirect.new_url
+        end
+    
+    end
+
   end
+
 
   # POST /redirects
   # POST /redirects.json
