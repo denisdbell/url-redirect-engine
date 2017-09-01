@@ -23,27 +23,49 @@ class RedirectsController < ApplicationController
 
   # GET /redirect
  # GET /redirect
-  def red
+  def perform_redirect
 
     url = params[:url]
+    query = params.has_key?(:query)
+
+    redirection_required = false;
+    rule = "";   
+    new_url = "";
+
+    puts query
 
     Redirect.all.each do |redirect|
 
-        puts  redirect.rule
-        puts  redirect.new_url
-
         if redirect.rule.match(url) 
-          redirect_to redirect.new_url
+            redirection_required = true
+            rule = redirect.rule
+            new_url = redirect.new_url 
         end
     
     end
 
+    RedirectLog.create( old_url: url, new_url: new_url, rule: rule,  status: redirection_required)
+
+     if !query and redirection_required
+          redirect_to new_url
+     else
+        respond_to do |format|
+            if redirection_required
+              msg = { :status => "ok", :rule => rule,:old_url => url,:new_url => new_url} 
+            else
+              msg = { :status => "ok", :message => "No redirect found for #{url}"}
+            end
+              format.json  { render :json => msg }
+        end
+    end
+   
   end
 
 
   # POST /redirects
   # POST /redirects.json
   def create
+
     @redirect = Redirect.new(redirect_params)
 
     respond_to do |format|
