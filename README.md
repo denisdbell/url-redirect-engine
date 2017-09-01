@@ -62,7 +62,7 @@ When performing an actual redirect the  the ***query** parameter of the url must
 
 # Viewing Redirect Logs:
 
-To view logs for all the redirects, naviagte to http://localhost:3000/redirect_logs.
+To view logs for the redirects performed naviagte to http://localhost:3000/redirect_logs.
 
 
 ## And thats it!!!
