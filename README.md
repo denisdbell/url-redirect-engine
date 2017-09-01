@@ -1,4 +1,4 @@
-#Url Redirect Engine
+# Url Redirect Engine
 
 The function of the Url Redirect Engine is to perform a URL redirect to a specified URL based on the rule/regex specified.
 
@@ -46,7 +46,7 @@ Navigate to http://localhost/redirects/new
 
 Testing the redirect:
 
-##Querying
+## Querying
 
 The query feature allows you to test a rule without actually performing a redirect. This is useful for testing purposes. To perform a query the ***query** parameter of the url must be set tor **true**, see below:
 
@@ -54,16 +54,16 @@ The query feature allows you to test a rule without actually performing a redire
 
 **RESPONSE-**{"status":"ok","message":"No redirect found for http://somwhere.com"}
 
-##Performing a redirect
+## Performing a redirect
 
 When performing an actual redirect the  the ***query** parameter of the url must be set tor **false**. The url must also be invoked from a web browser to see the redirect, see below:
 
 **REQUEST [GET]-** http://localhost:3000/perform_redirect?url=http://somwhere.com& **query=false**
 
-#Viewing Redirect Logs:
+# Viewing Redirect Logs:
 
 To view logs for all the redirects, naviagte to http://localhost:3000/redirect_logs.
 
 
-##And thats it!!!
+## And thats it!!!
 
