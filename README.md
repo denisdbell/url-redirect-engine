@@ -44,3 +44,20 @@ Navigate to http://localhost/redirects/new
 1. Enter a **Rule** in the form of a regex.
 2. Enter the **New Url**.
 
+Testing the redirect:
+
+##Querying
+
+The query feature allows you to test a rule without actually performing a redirect. This is useful for testing purposes. To perform a query the ***query** parameter of the url must be set tor **true**, see below:
+
+**REQUEST-** http://localhost:3000/perform_redirect?url=http://somwhere.com&**query=true**
+
+**RESPONSE-**{"status":"ok","message":"No redirect found for http://somwhere.com"}
+
+##Performing a redirect
+
+When performing an actual redirect the  the ***query** parameter of the url must be set tor **false**. The url must also be invoked from a web browser to see the redirect. See belwow:
+
+**REQUEST-** http://localhost:3000/perform_redirect?url=http://somwhere.com&**query=false**
+
+
