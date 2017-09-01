@@ -60,4 +60,10 @@ When performing an actual redirect the  the ***query** parameter of the url must
 
 **REQUEST [GET]-** http://localhost:3000/perform_redirect?url=http://somwhere.com& **query=false**
 
+#Viewing Redirect Logs:
+
+To view logs for all the redirects, naviagte to http://localhost:3000/redirect_logs.
+
+
+##And thats it!!!
 
