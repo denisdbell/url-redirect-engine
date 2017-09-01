@@ -1,24 +1,36 @@
-# README
+#Url Redirect Engine
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The function of the Url Redirect Engine is to perform a URL redirect to a specified URL based on the rule/regex specified.
 
-Things you may want to cover:
 
-* Ruby version
+## Prerquisites:
 
-* System dependencies
+You will need to have the following installed to run the application:
 
-* Configuration
+**Ruby 2.4.X** - See instructions on how to install ruby (https://www.ruby-lang.org/en/documentation/installation/)
+**Bundler 1.15.X** - See instructions on how to install bundler (http://bundler.io/)
 
-* Database creation
+## Running the application:
 
-* Database initialization
+Clone the application using the following command:
+```
+git clone https://github.com/denisdbell/url-redirect-engine.git
 
-* How to run the test suite
+```
+Navigate to the **url-redirect-engine** folder:
+```
+cd url-redirect-engine
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+Install dependencies using bundler:
 
-* Deployment instructions
+```
+cd url-redirect-engine
 
-* ...
+```
+
+Start the application:
+```
+cd url-redirect-engine
+
+```
