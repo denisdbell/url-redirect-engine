@@ -25,12 +25,14 @@ cd url-redirect-engine
 Install dependencies using bundler:
 
 ```
-cd url-redirect-engine
-
+bundle install
 ```
 
-Start the application:
+Run the database migrations:
 ```
-cd url-redirect-engine
-
+rails db:migrate
+```
+Start the application servers:
+```
+rails server
 ```
