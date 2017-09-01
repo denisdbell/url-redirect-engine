@@ -1,5 +1,7 @@
 class RedirectsController < ApplicationController
   before_action :set_redirect, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
+
 
   # GET /redirects
   # GET /redirects.json
