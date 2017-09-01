@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Old url:</strong>
+  <%= @redirect_log.old_url %>
+</p>
+
+<p>
+  <strong>New url:</strong>
+  <%= @redirect_log.new_url %>
+</p>
+
+<p>
+  <strong>Rule:</strong>
+  <%= @redirect_log.rule %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @redirect_log.status %>
+</p>
+
+<%= link_to 'Edit', edit_redirect_log_path(@redirect_log) %> |
+<%= link_to 'Back', redirect_logs_path %>

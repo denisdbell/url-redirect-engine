@@ -1,0 +1,2 @@
+class RedirectLog < ApplicationRecord
+end

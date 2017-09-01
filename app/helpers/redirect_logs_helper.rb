@@ -1,0 +1,2 @@
+module RedirectLogsHelper
+end
