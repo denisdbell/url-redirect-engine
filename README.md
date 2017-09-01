@@ -36,3 +36,11 @@ Start the application servers:
 ```
 rails server
 ```
+
+Adding a redirect rule:
+
+Navigate to http://localhost/redirects/new
+
+1. Enter a **Rule** in the form of a regex.
+2. Enter the **New Url**.
+
